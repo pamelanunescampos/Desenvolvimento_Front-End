@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme-toggle {
+  margin-top: 16px;
+  width: 50%;
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-left: 64px;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+:root {
+  --bg-start: #10b210;
+  --bg-end: #115e03;
+  --card-bg: #ffffff;
+  --text-main: #090e0b;
+  --text-muted: #0bec0b;
+  --accent: #41cf34;
+  --accent-dark: #298d08;
+}
+
+body.dark-theme {
+  --bg-start: #174209;
+  --bg-end: #268935;
+  --card-bg: #000000;
+  --text-main: #eff6ed;
+  --text-muted: #030903;
+  --accent: #08ff08;
+  --accent-dark: #2ef406;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  transition: background 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.card {
+  background: var(--card-bg);
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  width: 320px;
+  padding: 32px 24px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #09a174;
+}
+
+h1 { color: var(--text-main); }
+.bio, .cargo { color: var(--text-muted); }
+
+.cargo {
+  color: #115a1d;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.bio {
+  color: #5b6472;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  background: var(--accent);
+}
+
+.links a:hover {
+  background: var(--accent-dark);
+}
+
+
+@media (max-width: 400px) {
+  .card {
+    width: 90%;
+    padding: 24px 16px;
+  }
+}
